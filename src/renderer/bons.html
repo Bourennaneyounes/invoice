@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+    
+        <div class="navbar-header">
+          <button class="navbar-toggler" data-toggle="open-navbar1">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <a href="#">
+            <h4>Awesome<span>logo</span></h4>
+          </a>
+        </div>
+    
+        <div class="navbar-menu" id="open-navbar1">
+          <ul id="navItem" class="navbar-nav">
+            <li id="nav-1" ><a  href="./index.html">Fournisseur</a></li>
+            <li id="nav-2" ><a href="./facture.html" >Facture</a> </li>
+            <li id="nav-3" class="active" ><a  href="./bons.html" >Bons </a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- ///////////////////////////////////////////////////////////// -->
+    <form>
+      <div id="form-main-container">
+      <div id="form-area">
+        <div id="form-title">
+         Bons
+        </div>
+        <div id="form-body">
+          <div>
+            <div class="col-12">
+              <fieldset class="form-group">
+                <label class="form-label" for="input4">Input</label>
+                <input type="text" class="form-control" id="input4" placeholder="Input" required>
+              </fieldset>
+            </div>
+            <div class="col-12">
+              <fieldset class="form-group">
+                <label class="form-label" for="input5">Input</label>
+                <input type="text" class="form-control" id="input5" placeholder="Input" required>
+              </fieldset>
+            </div>
+            <div class="col-12">
+              <fieldset class="form-group">
+                <label class="form-label" for="input6">Input</label>
+                <input type="text" class="form-control" id="input6" placeholder="Input" required>
+              </fieldset>
+            </div>
+          </div>
+          <div>
+            <div class="center-text button-area">
+              <button type="button" class="btn btn-cancel">submit</button>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    </form>
+    <!-- <h1>Hello World!</h1>
+    Nous utilisons hhhhhhhhhhhhh Node.js <span id="node-version"></span>,
+    Chromium <span id="chrome-version"></span>,
+    et Electron <span id="electron-version"></span>. -->
+
+
+
+
+
+
+    <!-- Vous pouvez également demander que d’autres fichiers s’exécutent dans ce processus -->
+    <script src="./renderer.js"></script>
+  </body>
+</html>
