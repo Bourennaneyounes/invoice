@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
     <title>Hello World!</title>
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *;**script-src 'self' http://onlineerp.solution.quebec 'unsafe-inline' 'unsafe-eval';** "> -->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./assets/index.css" />
 
     <!-- <script src="https://unpkg.com/easyinvoice/dist/easyinvoice.min.js"></script> -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/easyinvoice/dist/easyinvoice.min.js"></script> -->
@@ -14,7 +14,6 @@
   <body>
     <nav class="navbar">
       <div class="container">
-    
         <div class="navbar-header">
           <button class="navbar-toggler" data-toggle="open-navbar1">
             <span></span>
@@ -25,12 +24,14 @@
             <h4>Awesome<span>logo</span></h4>
           </a>
         </div>
-    
+
         <div class="navbar-menu" id="open-navbar1">
           <ul id="navItem" class="navbar-nav">
-            <li id="nav-1" class="active" ><a  href="./index.html">Fournisseur</a></li>
-            <li id="nav-2" ><a href="./facture.html" >Facture</a> </li>
-            <li id="nav-3" ><a  href="./bons.html" >Bons </a></li>
+            <li id="nav-1" class="active">
+              <a href="./index.html">Fournisseur</a>
+            </li>
+            <li id="nav-2"><a href="./facture.html">Facture</a></li>
+            <li id="nav-3"><a href="./bons.html">Bons </a></li>
           </ul>
         </div>
       </div>
@@ -38,66 +39,90 @@
     <!-- ///////////////////////////////////////////////////////////// -->
     <form>
       <div id="form-main-container">
-      <div id="form-area">
-        <div id="form-title">
-         Fournisseur
-        </div>
-        <div id="form-body">
-          <div>
-            <div class="col-12">
-              <fieldset class="form-group">
-                <label class="form-label" for="nom">nom</label>
-                <input type="text" class="form-control" id="nom" placeholder="nom" required>
-              </fieldset>
+        <div id="form-area">
+          <div id="form-title">Fournisseur</div>
+          <div id="form-body">
+            <div>
+              <div class="col-12">
+                <fieldset class="form-group">
+                  <label class="form-label" for="nom">nom</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nom"
+                    placeholder="nom"
+                    required
+                  />
+                </fieldset>
+              </div>
+              <div class="col-12">
+                <fieldset class="form-group">
+                  <label class="form-label" for="prenom">prenom</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="prenom"
+                    placeholder="prenom"
+                    required
+                  />
+                </fieldset>
+              </div>
+              <div class="col-12">
+                <fieldset class="form-group">
+                  <label class="form-label" for="rc">RC</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="rc"
+                    placeholder="RC"
+                    required
+                  />
+                </fieldset>
+              </div>
+              <div class="col-12">
+                <fieldset class="form-group">
+                  <label class="form-label" for="rib">RIB</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="rib"
+                    placeholder="RIB"
+                    required
+                  />
+                </fieldset>
+              </div>
+              <div class="col-12">
+                <fieldset class="form-group">
+                  <label class="form-label" for="nif">NIF</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nif"
+                    placeholder="NIF"
+                    required
+                  />
+                </fieldset>
+              </div>
             </div>
-            <div class="col-12">
-              <fieldset class="form-group">
-                <label class="form-label" for="prenom">prenom</label>
-                <input type="text" class="form-control" id="prenom" placeholder="prenom" required>
-              </fieldset>
+            <div>
+              <div class="center-text button-area">
+                <button id="sub" type="button" class="btn btn-cancel">
+                  submit
+                </button>
+              </div>
             </div>
-            <div class="col-12">
-              <fieldset class="form-group">
-                <label class="form-label" for="rc">RC</label>
-                <input type="text" class="form-control" id="rc" placeholder="RC" required>
-              </fieldset>
-            </div>
-            <div class="col-12">
-              <fieldset class="form-group">
-                <label class="form-label" for="rib">RIB</label>
-                <input type="text" class="form-control" id="rib" placeholder="RIB" required>
-              </fieldset>
-            </div>
-            <div class="col-12">
-              <fieldset class="form-group">
-                <label class="form-label" for="nif">NIF</label>
-                <input type="text" class="form-control" id="nif" placeholder="NIF" required>
-              </fieldset>
-            </div>
-          </div>
-          <div>
-            <div class="center-text button-area">
-              <button id="sub" type="button" class="btn btn-cancel">submit</button>
-            </div>
-           
           </div>
         </div>
       </div>
-    </div>
     </form>
     <!-- <h1>Hello World!</h1>
     Nous utilisons hhhhhhhhhhhhh Node.js <span id="node-version"></span>,
     Chromium <span id="chrome-version"></span>,
     et Electron <span id="electron-version"></span>. -->
 
-
-
-
-
-
     <!-- Vous pouvez également demander que d’autres fichiers s’exécutent dans ce processus -->
-    <script src="./renderer.js" defer></script>
-   
+    <script src="./assets/renderer.js" defer></script>
+
     <!-- <script src="./server.js" type="module" defer></script> -->
   </body>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" type="module">

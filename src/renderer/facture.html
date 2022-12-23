@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
     <title>Hello World!</title>
-    <link rel="stylesheet" href="index.css">
-    
+    <link rel="stylesheet" href="./assets/index.css" />
   </head>
   <body>
     <nav class="navbar">
       <div class="container">
-    
         <div class="navbar-header">
           <button class="navbar-toggler" data-toggle="open-navbar1">
             <span></span>
@@ -22,12 +20,14 @@
             <h4>Awesome<span>logo</span></h4>
           </a>
         </div>
-    
+
         <div class="navbar-menu" id="open-navbar1">
           <ul id="navItem" class="navbar-nav">
-            <li id="nav-1"  ><a  href="./index.html">Fournisseur</a></li>
-            <li id="nav-2" class="active"><a href="./facture.html" >Facture</a> </li>
-            <li id="nav-3" ><a  href="./bons.html" >Bons </a></li>
+            <li id="nav-1"><a href="./index.html">Fournisseur</a></li>
+            <li id="nav-2" class="active">
+              <a href="./facture.html">Facture</a>
+            </li>
+            <li id="nav-3"><a href="./bons.html">Bons </a></li>
           </ul>
         </div>
       </div>
@@ -35,95 +35,158 @@
     <!-- ///////////////////////////////////////////////////////////// -->
     <form>
       <div id="form-main-container">
-      <div id="form-area">
-        <div id="form-title">
-         Facture
-        </div>
-        <div id="form-body">
-          <div>
-            <div class="col-12">
-              <p>Selectionner un Fournisseur: </p>
-              <select class="options" id="options">
-                <option class="option" value="1">text1</option>
-                <option class="option" value="2">text2</option>
-              </select>
-              <!-- <div class="options" id="options">
+        <div id="form-area">
+          <div id="form-title">Facture</div>
+          <div id="form-body">
+            <div>
+              <div class="col-12">
+                <p>Selectionner un Fournisseur:</p>
+                <select class="options" id="options">
+                  <option class="option" value="1">text1</option>
+                  <option class="option" value="2">text2</option>
+                </select>
+                <!-- <div class="options" id="options">
                  <div class="hide-option option" id="hide-option">Select any option.. <i class="fa fa-caret-down"></i></div>
               </div> -->
-            </div>
-            <div class="col-12">
-              <fieldset class="form-group">
-                <label class="form-label" for="numeroDossier">Numero Dossier</label>
-                <input type="text" class="form-control" id="numeroDossier" placeholder="Numero Dossier" required>
-              </fieldset>
-            </div>
-            <div class="col-12">
-              <fieldset class="form-group">
-                <label class="form-label" for="doit">Doit</label>
-                <input type="text" class="form-control" id="doit" placeholder="Doit" required>
-              </fieldset>
-            </div>
-            <div class="col-12">
-              <fieldset class="form-group">
-                <label class="form-label" for="numeroFactureProforma">Numero Facture Proforma</label>
-                <input type="text" class="form-control" id="numeroFactureProforma" placeholder="Numero Facture Proforma" required>
-              </fieldset>
-            </div>
-            <div class="col-12">
-              <fieldset class="form-group">
-                <label class="form-label" for="products">products</label>
-                <button type="button" class="btn btn-cancel" id="addProduct">add Product</button>
-                <button type="button" class="delete-btn btn btn-cancel" id="deleteProduct" >delete Product</button>
-                <div class="col-12">
-                  <fieldset class="form-group">
-                    <div class="products-list" id="productsList">
-                      <div class="products" id="products1">
-                        <label class="product-label form-label" for="product1" >1</label>
-                        <input type="text" class="product form-control" id="designation1" placeholder="designation" required>
-                        <input type="number" class="product form-control" id="quantite1" placeholder="quantite" required>
-                        <input type="text" class="product form-control" id="um1" placeholder="UM" required>
-                        <input type="number" class="product form-control" id="prixUht1" placeholder="PRIX UHT DZ" required>
+              </div>
+              <div class="col-12">
+                <fieldset class="form-group">
+                  <label class="form-label" for="numeroDossier"
+                    >Numero Dossier</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="numeroDossier"
+                    placeholder="Numero Dossier"
+                    required
+                  />
+                </fieldset>
+              </div>
+              <div class="col-12">
+                <fieldset class="form-group">
+                  <label class="form-label" for="doit">Doit</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="doit"
+                    placeholder="Doit"
+                    required
+                  />
+                </fieldset>
+              </div>
+              <div class="col-12">
+                <fieldset class="form-group">
+                  <label class="form-label" for="numeroFactureProforma"
+                    >Numero Facture Proforma</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="numeroFactureProforma"
+                    placeholder="Numero Facture Proforma"
+                    required
+                  />
+                </fieldset>
+              </div>
+              <div class="col-12">
+                <fieldset class="form-group">
+                  <label class="form-label" for="products">products</label>
+                  <button type="button" class="btn btn-cancel" id="addProduct">
+                    add Product
+                  </button>
+                  <button
+                    type="button"
+                    class="delete-btn btn btn-cancel"
+                    id="deleteProduct"
+                  >
+                    delete Product
+                  </button>
+                  <div class="col-12">
+                    <fieldset class="form-group">
+                      <div class="products-list" id="productsList">
+                        <div class="products" id="products1">
+                          <label class="product-label form-label" for="product1"
+                            >1</label
+                          >
+                          <input
+                            type="text"
+                            class="product form-control"
+                            id="designation1"
+                            placeholder="designation"
+                            required
+                          />
+                          <input
+                            type="number"
+                            class="product form-control"
+                            id="quantite1"
+                            placeholder="quantite"
+                            required
+                          />
+                          <input
+                            type="text"
+                            class="product form-control"
+                            id="um1"
+                            placeholder="UM"
+                            required
+                          />
+                          <input
+                            type="number"
+                            class="product form-control"
+                            id="prixUht1"
+                            placeholder="PRIX UHT DZ"
+                            required
+                          />
+                        </div>
                       </div>
-                    </div>
-                  </fieldset>
-                </div>
-              </fieldset>
-
+                    </fieldset>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="col-12">
+                <fieldset class="form-group">
+                  <label class="form-label" for="produitOrigine"
+                    >Produit Origine</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="produitOrigine"
+                    placeholder="produit Origine"
+                    required
+                  />
+                </fieldset>
+              </div>
+              <div class="col-12">
+                <fieldset class="form-group">
+                  <label class="form-label" for="livraison">Livraison</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="livraison"
+                    placeholder="livraison"
+                    required
+                  />
+                </fieldset>
+              </div>
             </div>
-            <div class="col-12">
-              <fieldset class="form-group">
-                <label class="form-label" for="produitOrigine">Produit Origine</label>
-                <input type="text" class="form-control" id="produitOrigine" placeholder="produit Origine" required>
-              </fieldset>
+            <div>
+              <div class="center-text button-area">
+                <button type="button" class="btn btn-cancel" id="subFacture">
+                  submit
+                </button>
+              </div>
             </div>
-            <div class="col-12">
-              <fieldset class="form-group">
-                <label class="form-label" for="livraison">Livraison</label>
-                <input type="text" class="form-control" id="livraison" placeholder="livraison" required>
-              </fieldset>
-            </div>
-          </div>
-          <div>
-            <div class="center-text button-area">
-              <button type="button" class="btn btn-cancel" id="subFacture">submit</button>
-            </div>
-           
           </div>
         </div>
       </div>
-    </div>
     </form>
     <!-- <h1>Hello World!</h1>
     Nous utilisons hhhhhhhhhhhhh Node.js <span id="node-version"></span>,
     Chromium <span id="chrome-version"></span>,
     et Electron <span id="electron-version"></span>. -->
 
-
-
-
-
-
     <!-- Vous pouvez également demander que d’autres fichiers s’exécutent dans ce processus -->
-    <script src="./rendererFacture.js"></script>
+    <script src="./assets/rendererFacture.js"></script>
   </body>
 </html>
