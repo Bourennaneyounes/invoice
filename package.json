@@ -12,19 +12,10 @@
     "url": "git+https://github.com/Bourennaneyounes/invoicing-software.git"
   },
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.74",
-    "@electron-forge/maker-deb": "^6.0.0-beta.74",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.74",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.74",
-    "@electron-forge/maker-zip": "^6.0.0-beta.74",
-    "electron-rebuild": "^3.2.9"
+    "electron": "^22.0.0"
   },
   "dependencies": {
     "easyinvoice": "^2.3.3",
-    "electron": "21.2.1",
-    "electron-squirrel-startup": "^1.0.0",
-    "rxdb": "^13.15.3",
-    "rxjs": "^7.6.0",
     "sqlite3": "^5.1.4"
   },
   "author": "Younes bourennane",
