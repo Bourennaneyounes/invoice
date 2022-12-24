@@ -157,7 +157,6 @@ ipcMain.handle('createFacture', async (e,options,numeroDossier,doit,numFacPro,pr
   // console.log("hiii : " + nom + " " + prenom + " " + email)
   // db.getAllFournisseurs();
   // db.getAllFournisseurs()
-  // db.db.get("SELECT * FROM FOURNISSEURS")
   // console.log(db.db.get(".tables"))
 });
 const createWindow = () => {
@@ -176,7 +175,6 @@ const createWindow = () => {
     // console.log("hiii : " + nom + " " + prenom + " " + email)
     // db.getAllFournisseurs();
     // db.getAllFournisseurs()
-    // db.db.get("SELECT * FROM FOURNISSEURS")
     // console.log(db.db.get(".tables"))
   });
   
@@ -187,44 +185,11 @@ const createWindow = () => {
     return result
     // console.log(result);
   })
-    
-  // );
-  // db.db.all(`SELECT * FROM FOURNISSEURS`, [], (err, rows) => {
-  //   if (err) {
-  //     throw err;
-  //   }
-  //   console.log(rows)
-  //   // win.webContents.send( 'getFournisseur', rows );
-  //   // return rows
-  //   rows.forEach((row) => {
-  //   //   console.log(row);
-  //   });
-  // });
-    
 
 
   win.loadFile('./renderer/index.html')
-  // db.createTables()
-  
-  // db.getAllFournisseurs();
-  
-    // let sql = `SELECT id id, Nom name FROM FOURNISSEURS WHERE id  = ?`;
-    
 
-  // row = db.getOneFournisseur(1)
-  // fors.forEach((row) => {
-  //     console.log(row);
-  //   });
-  // console.log(row)
 }
-// ipcMain.on("toMain", (event, args) => {
-//   // fs.readFile("path/to/file", (error, data) => {
-//     // Do something with file contents
-
-//     // Send result back to renderer process
-//     win.webContents.send("fromMain", "responseObj");
-//   // });
-// });
 
 app.whenReady().then(() => {
   createWindow();
@@ -236,5 +201,3 @@ app.whenReady().then(() => {
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit()
 })
-
-// db.getAllFournisseurs()
