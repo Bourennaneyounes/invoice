@@ -21,6 +21,7 @@ class Database{
             rib TEXT,
             nif TEXT)`
         );
+    
     };
 
     addFournisseur(nom, prenom,rc,rib,nif){
@@ -30,6 +31,14 @@ class Database{
             [nom, prenom, rc, rib, nif]
         );
     };
+
+    addProduit(nom, prenom,rc,rib,nif){
+      this.db.run(`
+          INSERT INTO Produits(nom, prenom, rc, rib, nif) 
+          VALUES (?, ?, ?, ?, ?)`,
+          [nom, prenom, rc, rib, nif]
+      );
+  };
 
     // getAllFournisseurs(){
     //     let sql = `SELECT * FROM FOURNISSEURS`;
