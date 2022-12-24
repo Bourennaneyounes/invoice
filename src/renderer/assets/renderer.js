@@ -121,13 +121,14 @@ element.addEventListener('click', (event) => {
 // window.api.receive("fromMain", (data) => {
 //     console.log(`Received ${data} from main process`);
 // });
-
-//   console.log(window.electronApi.getFournisseur());
-  document.getElementById("sub").addEventListener("click",() => {
+  document.getElementById("sub").addEventListener("click",async() => {
+    // !todo check if valid input and not empty
     const  nomValue = document.getElementById("nom").value;
     const  prenomValue = document.getElementById("prenom").value;
     const  rcValue = document.getElementById("rc").value;
     const  ribValue = document.getElementById("rib").value;
     const  nifValue = document.getElementById("nif").value;
-    window.electronApi.addFournisseur(nomValue,prenomValue,rcValue,ribValue,nifValue);
+    await window.electronApi.addFournisseur(nomValue,prenomValue,rcValue,ribValue,nifValue);
+    const list = await window.electronApi.getAllFournisseurs();
+    console.log(list);
 })

@@ -12,7 +12,6 @@ const db = require('./db/Database');
 //   console.log('Close the database connection.');
 // });
 
-
 const data = {
   // Customize enables you to provide your own templates
   // Please review the documentation for instructions and examples
@@ -170,20 +169,17 @@ const createWindow = () => {
   });
 
   // handlers
-  ipcMain.handle('addFournisseur', (e,nom,prenom,rc,rib,nif) => {
-    db.addFournisseur(nom,prenom,rc,rib,nif)
-    // console.log("hiii : " + nom + " " + prenom + " " + email)
-    // db.getAllFournisseurs();
-    // db.getAllFournisseurs()
-    // console.log(db.db.get(".tables"))
+  ipcMain.handle('addFournisseur', async (e,nom,prenom,rc,rib,nif) => {
+    await db.addFournisseur(nom,prenom,rc,rib,nif)
   });
   
-  // ipcMain.handle('getFournisseur', () => 'hellllo'
-    // db.addFournisseur(nom,prenom,rc,rib,nif)
-  ipcMain.handle('getFournisseur',async () => {
-    const result = await db.getAllFournisseurs()
-    return result
-    // console.log(result);
+  ipcMain.handle('getAllFournisseurs',async () => {
+    try {
+      const result = await db.getAllFournisseurs()
+      return result
+    } catch (error) {
+      // !TODO 
+    }
   })
 
 
